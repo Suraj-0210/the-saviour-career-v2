@@ -30,7 +30,11 @@
   molestie nibh, id varius nisl sollicitudin nec. Maecenas elementum quis enim a placerat. Vivamus nisl neque, euismod eget ante sed, 
   mattis porttitor nulla. In vitae finibus felis.</p>
     <h2 class='text-center mt-3 mb-2'>Open Positions</h2>
-    <p>TODO - Show the jobs here</p>
+    <div>
+      {% for job in jobs %}
+        {% include 'jobitem.html' %}
+      {% endfor %}
+    </div>
     <div class='text-center'>
       <button class='btn btn-primary'>Contact Us</button>
       <p class='text-center mt-3 mb-2''>Copyright 2024, The Saviour</p>
