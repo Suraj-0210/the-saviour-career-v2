@@ -1,7 +1,10 @@
 from sqlalchemy import create_engine,text
+import os
+
+db_connection_string = os.environ['db_connection_string']
 
 # Connect to the database
-engine = create_engine("mysql+pymysql://sql6692084:kkUpAyP9Hc@sql6.freemysqlhosting.net/sql6692084?charset=utf8mb4")
+engine = create_engine(db_connection_string)
 
 
 def load_jobs_from_db():
