@@ -14,11 +14,23 @@
   {% include 'banner.html' %}
   <div>
   <h3>{{job.title}}</h3>
-  <p class='lead'>{{job.location}}</p>
+  <b class='lead mb-7'>{{job.location}}</b>
   <h4>Responsibilty</h4>
-  <p>{{job.responsibility}}</p>
+    <ul>
+      {% for line in job.responsibility.split(".") %}
+      {% if line != "" %}
+      <li>{{line}}.</li>
+      {% endif %}
+      {% endfor %}
+    </ul>
   <h4>Requirements</h4>
-  <p>{{job.requirements}}</p>
+    <ul>
+      {% for line in job.requirements.split(".") %}
+      {% if line != "" %}
+      <li>{{line}}.</li>
+      {% endif %}
+      {% endfor %}
+    </ul>
   <h4>Salary</h4>
   <p>{{job.currency}} {{job.salary}}</p>
     </div>
