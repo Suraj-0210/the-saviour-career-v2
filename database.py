@@ -26,7 +26,6 @@ def load_jobs_from_db_by_id(id):
     else:
       return row[0]._asdict()
 
-# load_jobs_from_db_by_id(2)
   
 
 
