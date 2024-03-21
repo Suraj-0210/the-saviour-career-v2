@@ -28,7 +28,7 @@ def show_jobs(id):
 def apply_to_job(id):
   data = request.form
   job = load_jobs_from_db_by_id(id)
-  store_application_in_db(id, data)
+  # store_application_in_db(id, data)
   return render_template('application_submittd.html', application=data, job=job)
 
 if __name__ == '__main__':
