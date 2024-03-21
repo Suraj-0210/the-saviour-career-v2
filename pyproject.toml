@@ -9,8 +9,8 @@ packages = [{include = "repl_nix_the_saviour_career_"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 flask = "^3.0.2"
-sqlalchemy = "^2.0.28"
 flask-sqlalchemy = "^3.1.1"
+sqlalchemy = "^2.0.28"
 
 
 [build-system]
