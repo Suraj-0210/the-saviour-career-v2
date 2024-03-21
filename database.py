@@ -38,6 +38,6 @@ def store_application_in_db(job_id, data):
                  work_experience=data['work_experience'],
                  resume_url=data['resume_url'])
 
-store_application_in_db(1,)
+
 
 
