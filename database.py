@@ -37,7 +37,3 @@ def store_application_in_db(job_id, data):
                  education=data['education'],
                  work_experience=data['work_experience'],
                  resume_url=data['resume_url'])
-
-
-
-

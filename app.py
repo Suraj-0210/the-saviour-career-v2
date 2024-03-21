@@ -1,4 +1,4 @@
-from flask import Flask, json, jsonify, render_template, request
+from flask import Flask, jsonify, render_template, request
 from database import load_jobs_from_db, load_jobs_from_db_by_id, store_application_in_db
 
 app = Flask(__name__)
@@ -28,9 +28,8 @@ def show_jobs(id):
 def apply_to_job(id):
   data = request.form
   job = load_jobs_from_db_by_id(id)
-  # store_application_in_db(id, data)
-  return jsonify(data)
-  # return render_template('application_submittd.html', application=data, job=job)
+  store_application_in_db(id, data)
+  return render_template('application_submittd.html', application=data, job=job)
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True, port=8080)
