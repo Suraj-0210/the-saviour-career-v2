@@ -29,7 +29,7 @@ def load_jobs_from_db_by_id(id):
 def store_application_in_db(job_id, data):
   with engine.connect() as conn:
     query = text(f"INSERT INTO applications (job_id, full_name, email, linkedin_url, education, work_experience, resume_url) VALUES ({job_id}, '{data['full_name']}', '{data['email']}', '{data['linkedin_url']}', '{data['education']}', '{data['work_experience']}', '{data['resume_url']}');")
-    QUERY1 = "insert into applications (job_id, full_name, email, linkedin_url, education, work_experience, resume_url) values (3, 'sdad', 'kantaprustys@gmail.com', 'www.linkedin.com/in/suryakanta-%%E0%%A5%%A4%%E0%%A5%%A4-aa1542227', 'fewaf', 'faew', 'www.suraj-url.com');"
+    QUERY1 = text("insert into applications (job_id, full_name, email, linkedin_url, education, work_experience, resume_url) values (3, 'sdad', 'kantaprustys@gmail.com', 'www.linkedin.com/in/suryakanta-%%E0%%A5%%A4%%E0%%A5%%A4-aa1542227', 'fewaf', 'faew', 'www.suraj-url.com');")
     conn.execute(QUERY1)
 
 # query = text(f"INSERT INTO applications (job_id, full_name, email, linkedin_url, education, work_experience, resume_url) VALUES (:job_id, :full_name, :email, :linkedin_url, :education, :work_experience, :resume_url)")
