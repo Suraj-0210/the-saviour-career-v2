@@ -29,13 +29,13 @@ def load_jobs_from_db_by_id(id):
 def store_application_in_db(job_id, data):
   with engine.connect() as conn:
     query = text("INSERT INTO applications (job_id, full_name, email, linkedin_url, education, work_experience, resume_url) VALUES (:job_id, :full_name, :email, :linkedin_url, :education, :work_experience, :resume_url)")
-    param = ({'job_id':job_id,
-    'full_name':data['full_name'],
-    'email':data['email'],
-    'linkedin_url':data['linkedin_url'],
-    'education':data['education'],
-    'work_experience':data['work_experience'],
-    'resume_url':data['resume_url']})
+    param = ({'job_id':job_id})
+    # 'full_name':data['full_name'],
+    # 'email':data['email'],
+    # 'linkedin_url':data['linkedin_url'],
+    # 'education':data['education'],
+    # 'work_experience':data['work_experience'],
+    # 'resume_url':data['resume_url']})
     conn.execute(query, param)
   
 
