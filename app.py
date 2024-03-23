@@ -4,7 +4,7 @@ from database import load_jobs_from_db, load_jobs_from_db_by_id, store_applicati
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/careers')
 def helloWorld():
   jobs = load_jobs_from_db()
   return render_template('home.html', jobs=jobs)
