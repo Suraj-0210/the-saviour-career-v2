@@ -36,7 +36,7 @@ def store_application_in_db(job_id, data):
     # 'education':data['education'],
     # 'work_experience':data['work_experience'],
     # 'resume_url':data['resume_url']})
-    param = ({'job_id':1,
+    param = ({'job_id':'1',
       'full_name':'SURYA',
       'email':'LANRA',
       'linkedin_url':'FJKLAOF.COM',
