@@ -44,6 +44,7 @@ def store_application_in_db(job_id, data):
       'work_experience':'FIUHEIUWF',
       'resume_url':'NPUBIUN'})
     conn.execute(query, param)
+    conn.commit()
   
 
 # query = text(f"INSERT INTO applications (job_id, full_name, email, linkedin_url, education, work_experience, resume_url) VALUES (:job_id, :full_name, :email, :linkedin_url, :education, :work_experience, :resume_url)")
