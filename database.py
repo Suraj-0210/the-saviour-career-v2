@@ -28,7 +28,7 @@ def load_jobs_from_db_by_id(id):
 
 def store_application_in_db(job_id, data):
   with engine.connect() as conn:
-    query = text(f"INSERT INTO applications (job_id, full_name, email, linkedin_url, education, work_experience, resume_url) VALUES (:job_id, :full_name, :email, :linkedin_url, :education, :work_experience, :resume_url)")
+    query = text("INSERT INTO applications (job_id, full_name, email, linkedin_url, education, work_experience, resume_url) VALUES (:job_id, :full_name, :email, :linkedin_url, :education, :work_experience, :resume_url)")
     conn.execute(query, 
                 job_id=job_id,
                 full_name=data['full_name'],
