@@ -2,17 +2,17 @@
 <form action="/job/{{job['id']}}/apply" method="post">
   <div class='mb-2'>
     <label>Full Name</label>
-    <input type='text' name='full_name' placeholder='Surya Kanta'>
+    <input type='text'required name='full_name' placeholder='Surya Kanta'>
   </div>
   
   <div class='mb-2'>
     <label>Email</label>
-    <input type='text' name='email' placeholder='Surya.kanta@gmail.com'>
+    <input type='email' required name='email' placeholder='Surya.kanta@gmail.com'>
   </div>
 
   <div class='mb-2'>
     <label>Linkedin URL</label>
-    <input type='text' name='linkedin_url' placeholder='https://www.linkedin.com/in/surya-kanta-b8a'>
+    <input type='url' required name='linkedin_url' placeholder='https://www.linkedin.com/in/surya-kanta-b8a'>
   </div>
 
   <div class='mb-2'>
@@ -22,12 +22,12 @@
 
   <div class='mb-2'>
     <label>Work Experience</label><br>
-    <textarea name='work_experience'></textarea>
+    <textarea name='work_experience' required></textarea>
   </div>
 
   <div class='mb-2'>
     <label>Resume URL</label><br>
-    <input type='text' name='resume_url'>
+    <input type='url' required name='resume_url'>
   </div>
   
   <input type='submit'>
